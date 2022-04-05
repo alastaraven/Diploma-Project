@@ -1,0 +1,178 @@
+/* Стилизация инпутов */
+
+/* Стили основного поля инпута */
+
+.ctrl {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	background-color: var(--white-colour);
+	font-size: var(--input-text-size);
+	color: var(--black-colour);
+	text-align: center;
+	max-width: 200px;
+	height: 80px;
+}
+.ctrl__counter {
+	position: relative;
+	max-width: 200px;
+	height: 100px;
+	text-align: center;
+	overflow: hidden;
+}
+.ctrl__counter.is-input .ctrl__counter-num {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 100ms ease-in;
+}
+.ctrl__counter.is-input .ctrl__counter-input {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 100ms ease-in;
+}
+.ctrl__counter-input {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 100ms ease-in;
+}
+
+/* Стили кнопок +- */
+
+.ctrl__button {
+	width: 60px;
+	line-height: 60px;
+	text-align: center;
+	color: var(--blue-accent-colour);
+	cursor: pointer;
+	background-color: var(--white-colour);
+	transition: background-color 100ms ease-in;
+}
+.ctrl__button:hover {
+	background-color: var(--blue-accent-colour);
+	color: var(--white-colour);
+	transition: background-color 100ms ease-in;
+}
+.ctrl__button:active {
+	background-color: var(--light-colour);
+	transition: background-color 100ms ease-in;
+}
+.ctrl__button--decrement {
+	border-radius: 0px;
+	padding: 0 20px;
+	margin-left: -80px;
+}
+.ctrl__button--increment {
+	border-radius: 0px;
+	padding: 0 20px;
+	margin-right: -80px;
+}
+
+/* Переопределение стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+	.ctrl {
+		width: 100px;
+	}
+	.ctrl__button {
+		width: 40px;
+		line-height: 40px;
+	}
+	.ctrl__button--decrement {
+		padding: 0 10px;
+		margin-left: -60px;
+	}
+	.ctrl__button--increment {
+		padding: 0 10px;
+		margin-right: -60px;
+	}
+}
+
+/* Анимация элементов с помощью CSS3 animations */
+
+.ctrl__counter-num {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	line-height: 100px;
+	visibility: visible;
+
+	opacity: 1;
+	transition: opacity 100ms ease-in;
+}
+.ctrl__counter-num.is-increment-hide {
+	opacity: 0;
+	transform: translateY(-50px);
+	-webkit-animation: increment-prev 100ms ease-in;
+	animation: increment-prev 100ms ease-in;
+}
+.ctrl__counter-num.is-increment-visible {
+	opacity: 1;
+	transform: translateY(0);
+	-webkit-animation: increment-next 100ms ease-out;
+	animation: increment-next 100ms ease-out;
+}
+.ctrl__counter-num.is-decrement-hide {
+	opacity: 0;
+	transform: translateY(50px);
+	-webkit-animation: decrement-prev 100ms ease-in;
+	animation: decrement-prev 100ms ease-in;
+}
+.ctrl__counter-num.is-decrement-visible {
+	opacity: 1;
+	transform: translateY(0);
+	-webkit-animation: decrement-next 100ms ease-out;
+	animation: decrement-next 100ms ease-out;
+}
+@-webkit-keyframes decrement-prev {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes decrement-prev {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@-webkit-keyframes decrement-next {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+}
+@keyframes decrement-next {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+}
+@-webkit-keyframes increment-prev {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes increment-prev {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@-webkit-keyframes increment-next {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+}
+@keyframes increment-next {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+}

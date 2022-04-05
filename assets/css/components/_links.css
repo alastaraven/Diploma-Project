@@ -1,0 +1,7 @@
+.__link-item:hover {
+	color: var(--blue-accent-colour);
+}
+
+.__link-icon:hover {
+	fill: var(--blue-accent-colour);
+}

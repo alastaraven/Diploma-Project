@@ -1,0 +1,96 @@
+/* Стили восьмого экрана q&a */
+.que-ans__spoiler {
+	padding-top: 51px;
+}
+/* Удаление стандартного маркера */
+summary {
+	-webkit-details-marker-display: none;
+	-moz-list-bullet-list-style-type: none;
+}
+/* Стилизация спойлера для экрана que-ans */
+
+/* Заголовок */
+details {
+	padding: 40px;
+	border-bottom: 1px solid var(--white-colour);
+	position: relative;
+}
+details:first-child {
+	border-top: 1px solid var(--white-colour);
+}
+summary {
+	/* Ограничение кликабельной области заголовка */
+	display: inline-block;
+	width: 100%;
+
+	/* Косметические улучшения */
+	cursor: pointer;
+	outline: 0;
+	transition: color 0.1s;
+	-webkit-transition: color 0.1s;
+}
+summary:hover {
+	color: var(--blue-accent-colour);
+}
+
+/* Добавление маркера */
+
+details summary::before {
+	content: "+";
+	position: absolute;
+	right: 0;
+	font-size: var(--h2-text-size);
+}
+details[open] summary::before {
+	content: "-";
+	position: absolute;
+	right: 0;
+	font-size: var(--h2-text-size);
+}
+
+/* Контент, стоящий после заголовка */
+summary ~ * {
+	padding-right: 50px;
+	opacity: 0;
+	transition: opacity 0.1s linear;
+	-webkit-transition: opacity 0.1s linear;
+}
+
+/* Открытый спойлер */
+
+summary ~ * {
+	opacity: 1;
+}
+
+/* Фикс для IE 10-11 & Edge */
+
+details {
+	max-height: none;
+}
+summary {
+	max-height: 0;
+	overflow: hidden;
+	position: absolute;
+	/* IE испытывает проблемы с обычным max-height: 0; */
+}
+summary:focus {
+	color: var(--blue-accent-colour);
+}
+summary {
+	max-height: 20em;
+	position: static;
+	opacity: 1;
+}
+
+/* Анимация открытия спойлера  */
+details[open] {
+	animation: spoiler 1s;
+}
+@keyframes spoiler {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

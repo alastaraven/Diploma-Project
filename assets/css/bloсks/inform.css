@@ -1,0 +1,72 @@
+/* Стили седьмого экрана inform */
+.inform {
+	margin: 100px 0;
+	padding: 200px 0;
+	position: relative;
+	background: var(--dark-colour);
+}
+.inform__content {
+	padding-top: 60px;
+	gap: 270px;
+	display: flex;
+
+	align-items: center;
+}
+.inform__content::before {
+	content: "";
+	background-color: var(--blue-accent-colour);
+	z-index: 0;
+	position: absolute;
+	width: 80%;
+	height: 420px;
+	bottom: 230px;
+}
+.inform__text {
+	padding-left: 70px;
+	position: relative;
+	display: flex;
+	flex: 1 1 auto;
+	flex-flow: column wrap;
+	gap: 30px;
+}
+
+.inform__img {
+	flex: 0 0 370px;
+	width: 300px;
+	width: 100%;
+	position: relative;
+}
+.front-pic {
+	background-color: var(--dark-colour);
+	position: absolute;
+	width: 370px;
+	height: 500px;
+	top: 100px;
+	right: 0px;
+	left: -200px;
+	z-index: 2;
+}
+
+@media screen and (max-width: 1170px) {
+	.inform__text {
+		padding-top: 20px;
+		padding-left: 0px;
+	}
+	.inform__content {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 100px;
+	}
+	.inform__img {
+		flex: 0 0 auto;
+	}
+	.front-pic {
+		display: none;
+	}
+	.inform__content::before {
+		width: 100%;
+		height: 50%;
+		left: 0;
+		top: 19%;
+	}
+}

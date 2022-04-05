@@ -1,0 +1,22 @@
+/* Стили девятого экрана contacts */
+.contacts {
+	margin: 100px 0;
+	padding: 100px 0;
+	position: relative;
+	background: var(--dark-colour);
+}
+.contacts__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	padding: 0 40px;
+	text-align: center;
+}
+
+/* Переопределение стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+	.contacts__content {
+		padding: 0px;
+	}
+}

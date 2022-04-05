@@ -1,0 +1,28 @@
+/* Стили подвала */
+.footer {
+	border-top: 1px solid var(--gray-colour);
+	height: 110px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer__links {
+	display: flex;
+	gap: 20px;
+}
+.doc-pages {
+	gap: 40px;
+}
+
+/* Переопределение стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+	.footer {
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+	}
+	.copyright-text {
+		padding-top: 20px;
+	}
+}
