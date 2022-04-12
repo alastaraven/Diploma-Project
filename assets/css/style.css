@@ -1,11 +1,11 @@
 /* Стили шапки */
-@import url("/layout/_header.css");
+@import url("./layout/_header.css");
 
 /* Стили подвала */
-@import url("/layout/_footer.css");
+@import url("./layout/_footer.css");
 
 /* Стили мобильного меню */
-@import url("/layout/_mobile-menu.css");
+@import url("./layout/_mobile-menu.css");
 
 /* Переменные цветовой палитры элементов */
 @import url("./vars/colours.css");
