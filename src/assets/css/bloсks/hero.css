@@ -1,0 +1,49 @@
+/* Стили первого экрана hero */
+.hero {
+	padding: 100px 0;
+	display: flex;
+	gap: 100px;
+	align-items: center;
+}
+.__hero-left {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 50%;
+}
+.__hero-right {
+	width: 50%;
+}
+.__hero-right::before {
+	content: "";
+	background: var(--dark-colour);
+	position: absolute;
+	z-index: -1;
+	width: 40%;
+	height: 627px;
+	top: 150px;
+	right: 0px;
+}
+.h1-heading {
+	font-size: 60px;
+}
+
+/* Переопределение стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+	.hero {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.__hero-left {
+		width: 100%;
+	}
+	.__hero-right {
+		width: 100%;
+	}
+	.__hero-right::before {
+		display: none;
+	}
+	.h1-heading {
+		font-size: 30px;
+	}
+}

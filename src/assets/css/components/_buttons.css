@@ -1,0 +1,39 @@
+/* Стилизация кнопок */
+.__button--filled {
+	text-align: center;
+	font-size: var(--button-text-size);
+	padding: auto;
+	width: 370px;
+	height: 60px;
+	background-color: var(--blue-accent-colour);
+	border-radius: 30px;
+	color: var(--white-colour);
+	animation: fade-in 5s ease;
+}
+.__button--filled:hover {
+	background-color: var(--white-colour);
+	color: var(--blue-accent-colour);
+}
+.__button--outlined {
+	text-align: center;
+	font-size: var(--button-text-size);
+	padding: auto;
+	width: 370px;
+	height: 60px;
+	background-color: var(--dark-colour);
+	border: 1px solid var(--white-colour);
+	border-radius: 30px;
+	color: var(--white-colour);
+}
+.__button--outlined:hover {
+	background-color: var(--white-colour);
+	color: var(--black-colour);
+}
+
+/* Переопределение стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+	.__button--filled,
+	.__button--outlined {
+		width: 100%;
+	}
+}

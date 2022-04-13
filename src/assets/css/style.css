@@ -1,0 +1,135 @@
+/* Стили шапки */
+@import url("./layout/_header.css");
+
+/* Стили подвала */
+@import url("./layout/_footer.css");
+
+/* Стили мобильного меню */
+@import url("./layout/_mobile-menu.css");
+
+/* Переменные цветовой палитры элементов */
+@import url("./vars/colours.css");
+
+/* Переменные текстов */
+@import url("./vars/text.css");
+
+/* Стилизация иконок соц сетей */
+@import url("./components/_socials.css");
+
+/* Стилизация ссылок */
+@import url("./components/_links.css");
+
+/* Стилизация кнопок */
+@import url("./components/_buttons.css");
+
+/* Стилизация инпутов */
+@import url("./components/inputs.css/_inputs.css");
+
+/* Стили первого экрана hero */
+@import url("./bloсks/hero.css");
+
+/* Стили второго экрана second */
+@import url("./bloсks/second.css");
+
+/* Стили третьего экрана minting */
+@import url("./bloсks/minting.css");
+
+/* Стили четвёртого экрана roadmap */
+@import url("./bloсks/roadmap.css");
+
+/* Стили пятого экрана about */
+@import url("./bloсks/about.css");
+
+/* Стили шестого экрана team */
+@import url("./bloсks/team.css");
+
+/* Стили седьмого экрана inform */
+@import url("./bloсks/inform.css");
+
+/* Стили восьмого экрана q&a */
+@import url("./bloсks/que-ans.css");
+
+/* Стили девятого экрана contacts */
+@import url("./bloсks/contacts.css");
+
+/* Стили слайдера на экране roadmap */
+@import url("./base/roadmap-slider/flickity.min.css");
+
+/* Сброс дефолтных стилей */
+@import url("./base/custom-reset.css");
+
+/* Основные стили */
+html {
+	scroll-behavior: smooth;
+	user-select: none;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+	width: 10px;
+}
+body::-webkit-scrollbar-track {
+	background-color: var(--dark-colour);
+}
+body::-webkit-scrollbar-thumb {
+	background-color: var(--blue-accent-colour);
+}
+
+body {
+	background: var(--black-colour);
+	color: var(--white-colour);
+	font-family: "Poppins", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: var(--main-text-size);
+	line-height: 160%;
+}
+h1 {
+	font-size: var(--h1-text-size);
+	line-height: 140%;
+}
+h2 {
+	font-size: var(--h2-text-size);
+	font-weight: 700;
+}
+h3 {
+	font-size: var(--h3-text-size);
+}
+h4 {
+	font-size: var(--h4-text-size);
+	font-weight: 600;
+	line-height: 200%;
+}
+
+/* Обёртка контейнера */
+.wrap {
+	width: calc(100vw - 18.7%);
+	margin: 0 auto;
+}
+
+/* Переопределение стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+	.wrap {
+		width: calc(100vw - 10px);
+		padding: 0 20px;
+	}
+	h1 {
+		font-size: var(--h1-mob-text-size);
+	}
+}
+
+/* Анимация появления элементов */
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
