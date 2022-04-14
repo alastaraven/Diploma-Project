@@ -1,6 +1,6 @@
 ![screen](https://user-images.githubusercontent.com/98814925/161772665-5455ae5d-1a10-47b3-9a88-7e40635419d1.png)
 
-# Diploma-Project
+# <a href="https://alastaraven.github.io/Diploma-Project/"> Diploma-Project </a>
 The work is presented as a diploma design for the course "Web developer 2035" by ITMO. All data provided is for informational purposes only.
 
 What makes up the structure of the landing page:
